@@ -4,8 +4,9 @@ const API_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
 // Глобальные переменные
 let currentUser = null;
 
-// Дополнить инициализацию
+// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
+    // Основные функции
     initNavigation();
     initMembers();
     initSnow();
@@ -16,10 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSavedSettings();
     initDynamicNeon();
     initAllAvatars();
-    
     generateBgGrid();
     
-    // Новая инициализация
+    // Авторизация и заявки
     initAuth();
     initApplicationForm();
     checkAuth();
